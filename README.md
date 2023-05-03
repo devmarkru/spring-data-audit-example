@@ -21,4 +21,6 @@ create table company
 );
 ```
 
+Подробности вы можете узнать в статье [Аудит изменений в Spring Data JPA](https://devmark.ru/article/spring-data-audit-example).
+
 Ещё больше статей по разработке ПО вы можете найти на моём сайте [devmark.ru](https://devmark.ru).
