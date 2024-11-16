@@ -1,6 +1,7 @@
 package ru.devmark.example.audit.controller
 
 import org.springframework.data.repository.findByIdOrNull
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
@@ -32,4 +33,8 @@ class CompanyController(
         entity.name = dto.name
         companyRepository.save(entity)
     }
+
+    @GetMapping
+    fun getAllCompanies() =
+        companyRepository.findAll().toList()
 }

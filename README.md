@@ -5,21 +5,25 @@
 * автор последних изменений
 * дата последних изменений
 
-Всё, что для этого требуется - это добавить в нужную таблицу 4 поля и унаследовать целевую сущность от базового класс `Auditable`.
+Всё, что для этого требуется - это добавить в нужную таблицу 4 поля и унаследовать целевую сущность от базового класса `Auditable`.
 
 Пример таблицы с полями аудита:
 
 ```sql
-create table company
-(
-    id           serial constraint company_pk primary key,
-    name         varchar not null,
-    created_date timestamp,
-    updated_date timestamp,
-    created_by   varchar,
-    updated_by   varchar
+create table company(
+    id integer auto_increment primary key,
+    name varchar not null,
+    created_by varchar not null,
+    created_date timestamp not null,
+    updated_by varchar not null,
+    updated_date timestamp not null
 );
 ```
+
+Пример полностью готов к работе, т.к. использует **H2** - базу данных, работающую в оперативной памяти.
+При старте приложения происходит инициализация схемы БД (файл `resources/schema.sql`).
+
+Вы без труда сможете адаптировать этот пример для работы, например, с **PostgreSQL**. При этом не нужно править код. Достаточно изменить настройки подключения в файле `application.yml`, а также добавить в зависимости `build.gradle.kts` драйвер postgres.
 
 Подробности вы можете узнать в статье [Аудит изменений в Spring Data JPA](https://devmark.ru/article/spring-data-audit-example).
 
