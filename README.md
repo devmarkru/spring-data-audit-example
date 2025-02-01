@@ -25,6 +25,7 @@ create table company(
 
 Вы без труда сможете адаптировать этот пример для работы, например, с **PostgreSQL**. При этом не нужно править код. Достаточно изменить настройки подключения в файле `application.yml`, а также добавить в зависимости `build.gradle.kts` драйвер postgres.
 
-Подробности вы можете узнать в статье [Аудит изменений в Spring Data JPA](https://devmark.ru/article/spring-data-audit-example).
-
-Ещё больше статей по разработке ПО вы можете найти на моём сайте [devmark.ru](https://devmark.ru).
+### Полезные ссылки
+* [Аудит изменений в Spring Data JPA](https://devmark.ru/article/spring-data-audit-example).
+* [Новости проекта](https://t.me/+RjrPWNUEwf8wZTMy) и короткие заметки.
+* Ещё больше статей по разработке ПО вы можете найти на моём сайте [devmark.ru](https://devmark.ru/).
